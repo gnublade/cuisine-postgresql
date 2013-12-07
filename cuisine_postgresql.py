@@ -1,6 +1,6 @@
 try:
+    from cuisine import sudo
     from fabric.context_managers import cd, hide, settings
-    from fabric.operations import sudo
     from fabric.utils import puts
     __fabric_available = True
 except ImportError:
@@ -222,5 +222,5 @@ def run_as_postgres(cmd):
     #
     #     could not change directory to "/root"
     #
-    with cd('/'):
-        return sudo(cmd, user='postgres')
+    with cd('/'), settings(sudo_user='postgres'):
+        return sudo(cmd)
