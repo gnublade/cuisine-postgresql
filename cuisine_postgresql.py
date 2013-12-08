@@ -222,5 +222,5 @@ def run_as_postgres(cmd):
     #
     #     could not change directory to "/root"
     #
-    with cd('/'), settings(sudo_user='postgres'):
-        return sudo(cmd)
+    with cd('/'):
+        return sudo(cmd, user='postgres')
