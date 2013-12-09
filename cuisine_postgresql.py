@@ -3,7 +3,7 @@ try:
     from fabric.context_managers import cd, hide, settings
     from fabric.utils import puts
     __fabric_available = True
-except ImportError:
+except (ImportError, SystemExit):
     __fabric_available = False
 
 
