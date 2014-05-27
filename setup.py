@@ -23,7 +23,7 @@ setup(
     ],
     data_files=[('', ['LICENSE.txt', 'README.rst'])],
     description = 'Cuisine methods for PosgreSQL',
-    install_requires = ['cuisine', 'fabric'],
+    install_requires = ['cuisine', 'fabric', 'paramiko'],
     license = license_text,
     long_description=long_description,
     name = 'cuisine-postgresql',
